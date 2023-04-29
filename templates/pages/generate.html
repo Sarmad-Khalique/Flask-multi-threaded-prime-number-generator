@@ -1,0 +1,27 @@
+{% extends './index.html' %}
+{% block body %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-transparent">
+                    <h1 class="text-center">Prime Number Finder</h1>
+                </div>
+                <div class="card-body">
+                    <form id="prime-number-form" action="/generate" method="post">
+                        <div class="form-group my-2">
+                            <label for="start-number">Start Number</label>
+                            <input type="number" class="form-control" id="start-number" name="start_number" required>
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="end-number">End Number</label>
+                            <input type="number" class="form-control" id="end-number" name="end_number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block my-4">Find Prime Numbers</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
